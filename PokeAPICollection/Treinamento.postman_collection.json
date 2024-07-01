@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "65e78272-bbfe-48ad-8996-6105868691ce",
+		"name": "Treinamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deezer",
+			"item": [
+				{
+					"name": "TraackList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "e1fadf25e8msh6e0a5dfddb17c70p1a4e01jsn6889f309f946",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "deezerdevs-deezer.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
+							"protocol": "https",
+							"host": [
+								"deezerdevs-deezer",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "eminem"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Artist",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "e1fadf25e8msh6e0a5dfddb17c70p1a4e01jsn6889f309f946",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "deezerdevs-deezer.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
+							"protocol": "https",
+							"host": [
+								"deezerdevs-deezer",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "eminem"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-RapidAPI-Key",
+								"value": "e1fadf25e8msh6e0a5dfddb17c70p1a4e01jsn6889f309f946",
+								"type": "text"
+							},
+							{
+								"key": "X-RapidAPI-Host",
+								"value": "deezerdevs-deezer.p.rapidapi.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
+							"protocol": "https",
+							"host": [
+								"deezerdevs-deezer",
+								"p",
+								"rapidapi",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "eminem"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pokemon",
+			"item": [
+				{
+					"name": "Pokemon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.equal(200)",
+									"});",
+									"",
+									"pm.test(\"Validate Json ID\", function () {",
+									"var jsonResponse = JSON.parse(responseBody);",
+									"    pm.expect(jsonResponse.id).to.eql(132);",
+									"});",
+									"",
+									"pm.test(\"Validate Json Ability\", function () {",
+									"var jsonResponse = JSON.parse(responseBody);",
+									"    pm.expect(jsonResponse.abilities[1].ability.name).to.eql(\"imposter\");",
+									"});",
+									"",
+									"pm.test(\"Validate Json Move\", function () {",
+									"var jsonResponse = JSON.parse(responseBody);",
+									"    pm.expect(jsonResponse.moves[0].move.name).to.eql(\"transform\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/pokemon/pidgey",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"pokemon",
+								"pidgey"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "150",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Moves",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/move/5",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"move",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ability",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/ability/9/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"ability",
+								"9",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evolution Trigger",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/evolution-trigger",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"evolution-trigger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evolution Tree",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Berries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/berry",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"berry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/item/long-ball",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"item",
+								"long-ball"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/encounter-method/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"encounter-method",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Machines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pokeapi.co/api/v2/machine/",
+							"protocol": "https",
+							"host": [
+								"pokeapi",
+								"co"
+							],
+							"path": [
+								"api",
+								"v2",
+								"machine",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
