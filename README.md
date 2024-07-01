@@ -1,9 +1,10 @@
 # README
 
-[PokeAPI](https://pokeapi.co/docs/v2?authuser=0#items-section)
+[PokeAPI](https://pokeapi.co/docs/v2?authuser=0#items-section) 
+
 [Json Schema](https://www.jsonschema2pojo.org/)
 
-Created Scenarios:
+Scenarios:
 * Validate Item category
 * (Negative Scenario) Validate Status Code when the searched item does not exist
 * (Outline) Validate PokemonName for each Evolution Trigger
